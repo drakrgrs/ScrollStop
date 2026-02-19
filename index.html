@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScrollStop — Mindful Screen Time</title>
-  <meta name="description" content="ScrollStop turns your Screen Time interruptions into mindful moments. Breathing exercises, grounding techniques, and gentle pattern interruption for iPhone." />
+  <title>Mindful Shift — Mindful Screen Time</title>
+  <meta name="description" content="Mindful Shift turns your screen time into mindful moments. Gentle interruptions, breathing exercises, and grounding techniques for iPhone." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #0e0e12;
       --surface: #16161c;
@@ -18,7 +17,6 @@
       --muted: #888898;
       --radius: 18px;
     }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
       background: var(--bg);
@@ -26,8 +24,6 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* NAV */
     nav {
       display: flex;
       justify-content: space-between;
@@ -49,20 +45,9 @@
       text-decoration: none;
       color: var(--text);
     }
-    .nav-brand img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-    }
-    .nav-link {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
+    .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-link { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
     .nav-link:hover { color: var(--text); }
-
-    /* HERO */
     .hero {
       max-width: 760px;
       margin: 0 auto;
@@ -104,12 +89,7 @@
       max-width: 520px;
       margin: 0 auto 40px;
     }
-    .cta-group {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -124,41 +104,9 @@
       transition: opacity 0.2s, transform 0.2s;
     }
     .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--surface);
-      color: var(--text);
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 13px 28px;
-      border-radius: 999px;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-1px); }
-    .coming-soon {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 14px;
-    }
-
-    /* DIVIDER */
-    .divider {
-      max-width: 760px;
-      margin: 0 auto;
-      border: none;
-      border-top: 1px solid var(--border);
-    }
-
-    /* FEATURES */
-    .features {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
+    .coming-soon { font-size: 0.8rem; color: var(--muted); margin-top: 14px; }
+    .divider { max-width: 760px; margin: 0 auto; border: none; border-top: 1px solid var(--border); }
+    .features { max-width: 900px; margin: 0 auto; padding: 80px 24px; }
     .section-label {
       text-align: center;
       font-size: 0.78rem;
@@ -175,11 +123,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 56px;
     }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
     .feature-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -188,34 +132,11 @@
       transition: border-color 0.2s;
     }
     .feature-card:hover { border-color: rgba(124,106,247,0.3); }
-    .feature-icon {
-      font-size: 1.8rem;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .feature-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .feature-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* HOW IT WORKS */
-    .how {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-    }
+    .feature-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    .how { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+    .steps { display: flex; flex-direction: column; gap: 0; position: relative; }
     .steps::before {
       content: '';
       position: absolute;
@@ -225,12 +146,7 @@
       width: 2px;
       background: var(--border);
     }
-    .step {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      padding: 20px 0;
-    }
+    .step { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; }
     .step-num {
       width: 40px;
       height: 40px;
@@ -247,28 +163,10 @@
       position: relative;
       z-index: 1;
     }
-    .step-body h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      padding-top: 8px;
-    }
-    .step-body p {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    /* PRICING */
-    .pricing {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+    .step-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; padding-top: 8px; }
+    .step-body p { font-size: 0.9rem; color: var(--muted); }
+    .pricing { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
     .pricing-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -288,23 +186,9 @@
       margin-bottom: 10px;
     }
     .pricing-card.featured .pricing-tier { color: var(--accent); }
-    .pricing-price {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 4px;
-    }
-    .pricing-period {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-    .pricing-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .pricing-price { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 4px; }
+    .pricing-period { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .pricing-features li {
       font-size: 0.88rem;
       color: var(--muted);
@@ -312,14 +196,7 @@
       gap: 8px;
       align-items: flex-start;
     }
-    .pricing-features li::before {
-      content: '✓';
-      color: var(--accent);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* FOOTER */
+    .pricing-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 40px;
@@ -332,7 +209,6 @@
     footer p { font-size: 0.85rem; color: var(--muted); }
     footer a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
     footer a:hover { color: var(--text); }
-
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
       footer { padding: 24px 20px; flex-direction: column; text-align: center; }
@@ -343,17 +219,17 @@
 
   <nav>
     <a class="nav-brand" href="#">
-      <img src="icon.png" alt="ScrollStop icon" />
-      ScrollStop
+      <img src="icon.png" alt="Mindful Shift icon" />
+      Mindful Shift
     </a>
     <a class="nav-link" href="privacy.html">Privacy Policy</a>
   </nav>
 
   <section class="hero">
-    <img class="hero-icon" src="icon.png" alt="ScrollStop app icon" />
+    <img class="hero-icon" src="icon.png" alt="Mindful Shift app icon" />
     <div class="badge">Available on iPhone</div>
-    <h1>Scroll less.<br /><span>Live more.</span></h1>
-    <p class="hero-sub">ScrollStop intercepts doomscrolling and replaces it with a mindful moment — breathing exercises, grounding techniques, and gentle reminders that you're in control.</p>
+    <h1>Shift your habits.<br /><span>Reclaim your focus.</span></h1>
+    <p class="hero-sub">Mindful Shift intercepts doomscrolling and replaces it with a mindful moment — breathing exercises, grounding techniques, and gentle reminders that you're in control.</p>
     <div class="cta-group">
       <a class="btn-primary" href="#" id="app-store-btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -372,7 +248,7 @@
       <div class="feature-card">
         <span class="feature-icon">🛡️</span>
         <h3>Behavior Interruption</h3>
-        <p>Set time limits on any app or category. When you hit your threshold, ScrollStop steps in with a mindful shield instead of a hard block.</p>
+        <p>Set time limits on any app or category. When you hit your threshold, Mindful Shift steps in with a gentle shield instead of a hard block.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🌬️</span>
@@ -392,7 +268,7 @@
       <div class="feature-card">
         <span class="feature-icon">🕯️</span>
         <h3>Quiet Hours</h3>
-        <p>Set windows where ScrollStop stays silent. No interruptions during sleep, meals, or time that's already intentional.</p>
+        <p>Set windows where Mindful Shift stays silent. No interruptions during sleep, meals, or time that's already intentional.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🔒</span>
@@ -419,7 +295,7 @@
         <div class="step-num">2</div>
         <div class="step-body">
           <h3>Set your threshold</h3>
-          <p>Pick a time limit from 15 seconds to 60 minutes. When you hit it, ScrollStop quietly steps in.</p>
+          <p>Pick a time limit from 15 seconds to 60 minutes. When you hit it, Mindful Shift quietly steps in.</p>
         </div>
       </div>
       <div class="step">
@@ -441,7 +317,6 @@
 
   <hr class="divider" />
 
-    <!-- PRICING -->
   <section class="pricing">
     <p class="section-label">Pricing</p>
     <h2 class="section-title">Try it free. Keep it if it helps.</h2>
@@ -476,12 +351,11 @@
   </section>
 
   <footer>
-    <p>© 2026 ScrollStop. Made with intention.</p>
+    <p>© 2026 Mindful Shift. Made with intention.</p>
     <a href="privacy.html">Privacy Policy</a>
   </footer>
 
   <script>
-    // Swap CTA once app is live — just update this URL
     const APP_STORE_URL = '';
     const btn = document.getElementById('app-store-btn');
     const tag = document.getElementById('coming-soon-text');
