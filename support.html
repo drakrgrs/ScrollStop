@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Mindful Shift</title>
+  <meta name="description" content="Get help with Mindful Shift for iPhone." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0e0e12;
+      --surface: #16161c;
+      --border: rgba(255,255,255,0.07);
+      --accent: #7DA967;
+      --accent-soft: rgba(125,169,103,0.12);
+      --text: #f0f0f5;
+      --muted: #888898;
+      --radius: 18px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(14,14,18,0.85);
+      backdrop-filter: blur(16px);
+      z-index: 100;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-link { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-link:hover { color: var(--text); }
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 80px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 56px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-item h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .faq-item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-top: 8px;
+    }
+    .contact-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 0.85rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; }
+    footer a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+    footer a:hover { color: var(--text); }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="index.html">
+      <img src="icon.png" alt="Mindful Shift icon" />
+      Mindful Shift
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="privacy.html">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Support</h1>
+    <p class="subtitle">We're here to help. Most questions are answered below — if not, reach out directly.</p>
+
+    <div class="card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Why does the app need Screen Time permission?</h3>
+        <p>Mindful Shift uses Apple's Screen Time APIs (FamilyControls and DeviceActivity) to monitor app usage and deliver mindful interruptions. This permission is required to detect when you've hit your time limit and show the shield. No usage data leaves your device.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>The shield isn't appearing — what do I do?</h3>
+        <p>Make sure Screen Time permission is granted in Settings → Screen Time, and that you've selected apps to monitor in the Config tab. Shields require a physical device — they don't work in the iOS Simulator. There is also a minimum ~15 second latency built into the Apple API before a shield triggers.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I restore my purchase?</h3>
+        <p>On the Account tab, tap "Restore Purchases." Your subscription is tied to your Apple ID and will restore automatically as long as you're signed into the same account.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I cancel my subscription?</h3>
+        <p>Go to Settings → Apple ID → Subscriptions on your iPhone and cancel from there. Apple manages all billing — we don't store any payment information.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>My notifications aren't showing up.</h3>
+        <p>Make sure notifications are enabled for Mindful Shift in Settings → Notifications. Also check that Quiet Hours aren't active in the app's Config tab during the times you expect pings.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 16px;">Still need help? Send us an email and we'll get back to you as soon as possible.</p>
+      <a class="contact-btn" href="mailto:drakrgrs.dev@outlook.com">
+        Email Support
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Mindful Shift. Made with intention.</p>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+</body>
+</html>
